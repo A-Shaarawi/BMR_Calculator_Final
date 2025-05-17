@@ -6,54 +6,76 @@ const ResultsContainer = styled.div`
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+`;
+
+const Title = styled.h2`
+  color: #1a73e8;
+  margin-bottom: 1.5rem;
+  text-align: center;
 `;
 
 const ResultRow = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding: 0.5rem 0;
+  padding: 1rem;
   border-bottom: 1px solid #eee;
-
+  
   &:last-child {
     border-bottom: none;
   }
 `;
 
 const Label = styled.span`
-  color: #666;
+  font-weight: 500;
+  color: #333;
 `;
 
 const Value = styled.span`
-  font-weight: bold;
   color: #1a73e8;
+  font-weight: 600;
+`;
+
+const HighlightValue = styled(Value)`
+  font-size: 1.2rem;
+  color: #1557b0;
 `;
 
 function BMRResults({ data }) {
   return (
     <ResultsContainer>
+      <Title>Your Results</Title>
       <ResultRow>
-        <Label>BMR:</Label>
-        <Value>{data.bmr} Calories/Day</Value>
+        <Label>Basal Metabolic Rate (BMR)</Label>
+        <HighlightValue>{data.bmr} calories/day</HighlightValue>
       </ResultRow>
       <ResultRow>
-        <Label>Daily Calories:</Label>
-        <Value>{data.dailyCalories} Calories/Day</Value>
+        <Label>Daily Calorie Needs</Label>
+        <HighlightValue>{data.dailyCalories} calories/day</HighlightValue>
       </ResultRow>
       <ResultRow>
-        <Label>Weight:</Label>
+        <Label>Weight</Label>
         <Value>{data.weight} kg</Value>
       </ResultRow>
       <ResultRow>
-        <Label>Age:</Label>
+        <Label>Age</Label>
         <Value>{data.age} years</Value>
       </ResultRow>
       <ResultRow>
-        <Label>Height:</Label>
+        <Label>Height</Label>
         <Value>{data.height} cm</Value>
+      </ResultRow>
+      <ResultRow>
+        <Label>Activity Level</Label>
+        <Value>
+          {data.days === '0' ? 'Sedentary' :
+           data.days === '1-2' ? 'Light' :
+           data.days === '3-4' ? 'Moderate' :
+           data.days === '5-6' ? 'Very Active' : 'Extra Active'}
+        </Value>
+      </ResultRow>
+      <ResultRow>
+        <Label>Gender</Label>
+        <Value>{data.gender === 'male' ? 'Male' : 'Female'}</Value>
       </ResultRow>
     </ResultsContainer>
   );
