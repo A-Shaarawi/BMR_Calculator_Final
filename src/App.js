@@ -45,7 +45,7 @@ function App() {
     dailyCalories: 0
   });
 
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userId, setUserId] = useState(null);
   const [username, setUsername] = useState(null);
   const [refreshHistory, setRefreshHistory] = useState(0);
@@ -53,7 +53,7 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      setIsAuthenticated(true);
+      // setIsAuthenticated(true);
       // Try to get userId and username from localStorage (set after login/signup)
       const user = localStorage.getItem('user');
       if (user) {
