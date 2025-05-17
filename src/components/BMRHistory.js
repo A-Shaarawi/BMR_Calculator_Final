@@ -49,7 +49,7 @@ function BMRHistory({ userId, refresh }) {
   const fetchHistory = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5001/api/bmr?userId=${userId}`);
+      const res = await fetch(`bmrcalculatorfinal-production.up.railway.app/api/bmr?userId=${userId}`);
       const data = await res.json();
       setHistory(data);
     } catch (err) {
@@ -64,7 +64,7 @@ function BMRHistory({ userId, refresh }) {
   }, [userId, refresh]);
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:5001/api/bmr/${id}`, { method: 'DELETE' });
+    await fetch(`bmrcalculatorfinal-production.up.railway.app/api/bmr/${id}`, { method: 'DELETE' });
     fetchHistory();
   };
 

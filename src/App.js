@@ -95,7 +95,7 @@ function App() {
     // Save to backend if userId and username exist (i.e., logged in)
     if (userId && username) {
       try {
-        const response = await fetch('http://localhost:5001/api/bmr', {
+        const response = await fetch('bmrcalculatorfinal-production.up.railway.app/api/bmr', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
