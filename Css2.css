@@ -1,0 +1,159 @@
+body
+{
+    background-color:rgb(24, 23, 23)
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1
+{
+    color: red;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.div1
+{
+    border: none;
+    border-radius: 20px;
+    padding-inline: 30px;
+    display: grid;
+    justify-content: center;
+    background-color: rgb(0, 35, 46);
+}
+
+
+input
+{
+    margin-bottom: 20px;
+    height: 30px;
+    border: solid 2px ;
+    border-radius: 8px;
+}
+input:focus
+{
+    scale:1.02;
+}
+.submit
+{
+    width: 70px;
+    height: 30px;
+    justify-self: center;
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    border: 2px black ;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom:20px;
+    transition: 0.3s ease-in-out;
+}
+.reset
+{
+    width: 70px;
+    height: 30px;
+    justify-self: center;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border: 2px black ;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom:20px;
+    transition: 0.3s ease-in-out;
+}
+.submit:hover
+{
+    background-color: rgb(1, 75, 1);
+}
+.reset:hover
+{
+    background-color: rgb(114, 0, 0)
+}
+.buttons
+{
+    justify-self:  center;
+}
+  
+p
+{
+    color: white;
+    font-size: 34px;
+    justify-self:center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+#text
+{
+    padding-bottom: 3px;
+}
+.text
+{
+    display: flex;
+    text-align: center;
+   
+}
+.else
+{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+p
+{
+    margin-right: 8px;
+}
+.all
+{
+    border: 2px solid rgb(255, 255, 255);
+    height: 230px;
+    border-radius: 30px;
+    width: 300px;
+    transition: 0.75s;
+    
+}
+.all:hover
+{
+    background-color: rgb(0, 35, 46);
+    /* box-shadow: 5px 10px 10px #9b1e1e; */
+    scale:1.1;
+}
+#result
+{
+    color: green;
+}
+.checkbox
+{
+    display: flex;
+    justify-content: center;
+}
+#malecheck, #femalecheck
+{
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#cal
+{
+    color: green;
+}
+
+@media screen and (max-width:690px)
+{
+    .for-res
+    {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:450px)
+{
+    .for-res
+    {
+        font-size: 15px;
+    }
+}
